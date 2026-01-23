@@ -1,4 +1,5 @@
-🧠 Intelligent LRU Cache with Machine Learning (DSA + ML Project)
+# 🧠 Intelligent LRU Cache with Machine Learning (DSA + ML Project)
+
 A real-world system design project that combines Data Structures (LRU Cache) with Machine Learning to build an intelligent caching mechanism that predicts future data reuse and makes smarter eviction decisions that traditional LRU.
 
 ## Tech Stack
