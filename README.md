@@ -19,6 +19,7 @@ A real-world system design project that combines Data Structures (LRU Cache) wit
 - logger.py
 - feature_engineering.py
 - train_model.py
+- simulate_cache.py
 - predictor.py
 - app.py
 - models/
