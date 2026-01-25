@@ -47,10 +47,3 @@ class LRUCache:
             if len(self.cache)>self.capacity:
                 lru=self._pop_tail()
                 del self.cache[lru.key]
-cache=LRUCache(2)
-cache.put(1,"A")
-cache.put(2,"B")
-print(cache.get(1))
-cache.put(3,"C")
-print(cache.get(2))
-print(cache.get(3))
