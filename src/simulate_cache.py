@@ -1,20 +1,18 @@
 from lru_cache import LRUCache
-def simulate_requests():
-    cache=LRUCache(3)
-    requests=[
-        (1,"Page_A"),
-        (2,"Page_B"),
-        (3,"Page_C"),
-        (1,None),
-        (4,"Page_D"),
-        (2,None)
-    ]
-    for req in requests:
-        key,value=req
-        if value:
-            print(f"PUT {key} -> {value}")
-            cache.put(key,value)
-        else:
-            print(f"GET {key} -> ",cache.get(key))
+def process_requests_from_file(filename,cache):
+    with open(filename,"r") as file:
+        for line in file:
+            parts=line.strip().split()
+            if not parts:
+                continue
+            if parts[0]=="PUT":
+                _, key,value=parts
+                cache.put(int(key),value)
+            elif parts[0]=="GET":
+                _, key=parts
+                cache.get(int(key))
+            cache.display()
+            print("-"*30)
 if __name__=="__main__":
-    simulate_requests()
+    lru=LRUCache(capacity=3)
+    process_requests_from_file("requests.txt", lru)
