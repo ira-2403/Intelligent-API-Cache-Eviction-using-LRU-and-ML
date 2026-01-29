@@ -1,73 +1,69 @@
-# 🧠 Intelligent LRU Cache with Machine Learning (DSA + ML Project)
+#🧠 Intelligent API Cache Eviction System
+A real-world backend project that implemets an **intelligent API caching system** using **LRU (DSA)** and **Machine Learning** to optimize cache eviction decisions. The system caches real API responses and uses an ML model to predict whether a cached request will be reused soon.
 
-A real-world system design project that combines Data Structures (LRU Cache) with Machine Learning to build an intelligent caching mechanism that predicts future data reuse and makes smarter eviction decisions that traditional LRU.
-
-## Tech Stack
+##Tech Stack
 - Python
-- Data Structures (HashMap, Doubly Linked List)
-- Pandas
-- Numpy
-- Scikil-learn
-- Matplotlib
+- FastAPI
 - Streamlit
+- Scikit-learn
+- Requests 
+- Pandas
 
-## Project Structure
-- data/
-- access_logs.csv
-- src/
+##Project Structure
+- backend/
+- main.py
+- cache/
 - lru_cache.py
-- logger.py
-- feature_engineering.py
-- train_model.py
-- simulate_cache.py
+- ml/
+- model.py
 - predictor.py
+- model.pkl
+- utils/
+- logger.py
+- data/
+- logs.csv
+- frontend/
 - app.py
-- models/
-- reuse_predictor.pkl
 - requirements.txt
-- result.csv
-- README.md
 
-## Unique Selling Point (USP)
-- Combines **core DSA concepts** with **Machine Learning**
-- Moves beyond rule-based caching to **prediction-driven eviction**
-- Simulates **real-world cache behavior** using access logs
-- Demonstrates **system design thinking**, not just algorithms
-- Shows how **ML** can optimize **low-performance system**
+##Unique Selling Point
+- Real-time intelligent cache eviction using ML predictions
+- LRU cache implementation using core DSA concepts
+- Works with **any public API URL**
+- ML model trained on real request logs, not simulated data
+- End-to-end system: frontend->backend->cache->ML
+- Beginner-friendly yet production-style backend architecture
 
-## Features
-- Traditional LRU Cache implementation (O(1)
-operations)
-- Real-world cache access simulation
-- Logging of cache access platforms
-- Feature engineering from access logs
-- Machine Learning-based eviction strategy
-- Comparision between normal LRU and intelligent LRU
-- Performance visualization
+##Features
+- Accepts any public API request
+- LRU-based caching with hit/miss tracking
+- Machine learning-guided cache eviction
+- Request logging for dataset creation
+- Interactive Streamlit frontend
+- Displays cache status and ML decision
 
-## Real-World Use Case
-- API response caching
-- E-commerce product caching
-- Streaming content buffering
-- Social media feed optimization
-- Database query caching
+##How It Works
+1. User enters a public API URL in the streamlit app
+2. Request is sent to FastAPI backend
+3. Backend checks the LRU cache 
+4. Cache HIT or MISS is recorded
+5. ML model predicts whether the request will be reused
+6. Cache eviction decision is made
+7. Response and metadata are returned to the user
 
-## How It Works
-- Cache stores frequently accessed items using LRU
-- Access patterns are logged (frequency, recency, time gaps)
-- ML model predicts probability of future reuse
-- Cache evicts the item **lowest predicted reuse**, not just least recent
-
-## How To Run
+##How To Run
 - pip install -r requirements.txt
-- python src/logger.py
-- python src/train_model.py
-- streamlit run src/app.py
+- unicorn backend.main:app --reload
+- streamlit run frontend/app.py
 
-## Future Improvements
-- Deep Learning-based reuse prediction
-- Distributed cache support
-- Real-time streaming logs
-- Support for multiple eviction policies
-- Cloud deployment
+##Output Shown To User
+- API response data
+- Cache HIT/MISS
+- ML decision (KEEP/EVICT)
+- Response time
 
+##Future Improvement
+- Support for multiple eviction strategies (LFU,ARC)
+- Online learning for ML model
+- Redis integration
+- Deployment using Docker
