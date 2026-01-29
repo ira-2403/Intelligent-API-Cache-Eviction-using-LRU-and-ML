@@ -1,7 +1,7 @@
-#🧠 Intelligent API Cache Eviction System
+# 🧠 Intelligent API Cache Eviction System
 A real-world backend project that implemets an **intelligent API caching system** using **LRU (DSA)** and **Machine Learning** to optimize cache eviction decisions. The system caches real API responses and uses an ML model to predict whether a cached request will be reused soon.
 
-##Tech Stack
+## Tech Stack
 - Python
 - FastAPI
 - Streamlit
@@ -9,7 +9,7 @@ A real-world backend project that implemets an **intelligent API caching system*
 - Requests 
 - Pandas
 
-##Project Structure
+## Project Structure
 - backend/
 - main.py
 - cache/
@@ -26,7 +26,7 @@ A real-world backend project that implemets an **intelligent API caching system*
 - app.py
 - requirements.txt
 
-##Unique Selling Point
+## Unique Selling Point
 - Real-time intelligent cache eviction using ML predictions
 - LRU cache implementation using core DSA concepts
 - Works with **any public API URL**
@@ -34,7 +34,7 @@ A real-world backend project that implemets an **intelligent API caching system*
 - End-to-end system: frontend->backend->cache->ML
 - Beginner-friendly yet production-style backend architecture
 
-##Features
+## Features
 - Accepts any public API request
 - LRU-based caching with hit/miss tracking
 - Machine learning-guided cache eviction
@@ -42,7 +42,7 @@ A real-world backend project that implemets an **intelligent API caching system*
 - Interactive Streamlit frontend
 - Displays cache status and ML decision
 
-##How It Works
+## How It Works
 1. User enters a public API URL in the streamlit app
 2. Request is sent to FastAPI backend
 3. Backend checks the LRU cache 
@@ -51,18 +51,18 @@ A real-world backend project that implemets an **intelligent API caching system*
 6. Cache eviction decision is made
 7. Response and metadata are returned to the user
 
-##How To Run
+## How To Run
 - pip install -r requirements.txt
 - unicorn backend.main:app --reload
 - streamlit run frontend/app.py
 
-##Output Shown To User
+## Output Shown To User
 - API response data
 - Cache HIT/MISS
 - ML decision (KEEP/EVICT)
 - Response time
 
-##Future Improvement
+## Future Improvement
 - Support for multiple eviction strategies (LFU,ARC)
 - Online learning for ML model
 - Redis integration
