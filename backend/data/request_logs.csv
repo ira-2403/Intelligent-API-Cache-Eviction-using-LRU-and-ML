@@ -1,0 +1,7 @@
+timestamp,url,method,cache_status,response_time_ms,data_size
+2026-02-03T00:07:31.082220,https://jsonplaceholder.typicode.com/posts/1,GET,MISS,226,282
+2026-02-03T00:07:37.363428,https://jsonplaceholder.typicode.com/posts/1,GET,HIT,0,282
+2026-02-03T00:07:46.849196,https://jsonplaceholder.typicode.com/posts/2,GET,MISS,273,268
+2026-02-03T00:07:51.864541,https://jsonplaceholder.typicode.com/posts/2,GET,HIT,0,268
+2026-02-03T00:08:14.910412,https://jsonplaceholder.typicode.com/posts/9,GET,MISS,258,236
+2026-02-03T00:08:21.083183,https://jsonplaceholder.typicode.com/posts/9,GET,HIT,0,236
