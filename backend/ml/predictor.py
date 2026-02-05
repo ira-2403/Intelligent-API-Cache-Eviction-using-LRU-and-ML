@@ -13,5 +13,7 @@ class CacheReusePredictor:
             features.get("response_time_ms",0),
             features.get("data_size",0)
         ]])
+        print("Features:",X)
+        print("Prediction:",self.model.predict(X))
         return int(self.model.predict(X)[0])
     

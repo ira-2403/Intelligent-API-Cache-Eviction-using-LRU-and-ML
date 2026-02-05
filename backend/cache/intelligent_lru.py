@@ -22,23 +22,27 @@ class IntelligentLRUCache(LRUCache):
             if score< lowest_score:
                 lowest_score=score
                 lowest_key=key
+        print(lowest_key,lowest_score)
         return lowest_key
     def put(self,key,value,metadata:None):
         if metadata is None:
-            metadata={}
+            metadata={
+                "url_freq":1,
+                "cache_hit":0,
+                "response_time_ms":100,
+                "time_diff":1,
+                "data_size":500
+            }
         self.metadata_store[key]=metadata
         if self.size<self.capacity:
             super().put(key,value)
             return
-        prediction=0
+        evict_key=None
         try:
             prediction=self.predictor.predict(metadata)
         except Exception:
-            pass
-        if prediction==0:
-            evict_key=self.get_lowest_score_key()
-        else:
-            evict_key=self.tail.prev.key
+            prediction=0
+        evict_key=self.get_lowest_score_key()
         if evict_key:
             node=self.cache.get(evict_key)
             if node:

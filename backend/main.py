@@ -60,14 +60,25 @@ def handle_request(request:RequestModel):
     }
 @app.get("/stats")
 def get_stats():
-    stats=intelligent_cache.stats()
-    total=stats["hit"]+stats["misses"]
-    hit_rate=stats["hits"]/total if total>0 else 0
+    i_stats=intelligent_cache.stats()
+    i_total=i_stats["hits"]+i_stats["misses"]
+    i_hit_rate=i_stats["hits"]/i_total if i_total>0 else 0
+    n_stats=normal_cache.stats()
+    n_total=n_stats["hits"]+n_stats["misses"]
+    n_hit_rate=n_stats["hits"]/n_total if n_total>0 else 0
     return{
-        "hits":stats["hits"],
-        "misses":stats["misses"],
-        "hit_rate":hit_rate,
-        "current_size":stats["current_size"]
+        "intelligent_cache":{
+            "hits":i_stats["hits"],
+            "misses":i_stats["misses"],
+            "hit_rate":i_hit_rate,
+            "current_size":i_stats["current_size"]
+        },
+        "normal_cache":{
+            "hits":n_stats["hits"],
+            "misses":n_stats["misses"],
+            "hit_rate":n_hit_rate,
+            "current_size":n_stats["current_size"]
+        }
     }
 @app.get("/comparision")
 def comparison():
