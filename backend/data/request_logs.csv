@@ -24,3 +24,8 @@ timestamp,url,method,cache_status,response_time_ms,data_size
 2026-02-05T01:17:55.997186,https://jsonplaceholder.typicode.com/posts/1,GET,HIT,0,282
 2026-02-05T01:18:03.855877,https://jsonplaceholder.typicode.com/posts/2,GET,MISS,567,268
 2026-02-05T01:18:07.384479,https://jsonplaceholder.typicode.com/posts/2,GET,HIT,0,268
+2026-02-05T21:21:38.850504,https://jsonplaceholder.typicode.com/posts/1,GET,MISS,678,282
+2026-02-05T21:22:02.340801,https://jsonplaceholder.typicode.com/posts/1,GET,MISS,591,282
+2026-02-05T21:22:09.620418,https://jsonplaceholder.typicode.com/posts/1,GET,MISS,508,282
+2026-02-05T21:25:02.933605,https://jsonplaceholder.typicode.com/posts/1,GET,MISS,574,282
+2026-02-05T21:25:06.588287,https://jsonplaceholder.typicode.com/posts/1,GET,HIT,0,282
