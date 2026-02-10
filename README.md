@@ -4,7 +4,7 @@ A high-performance intelligent caching system that enhances traditional LRU (Lea
 
 ---
 
-## 📌 Overview
+## Overview
 
 Traditional caching strategies like LRU rely only on recency, which may not always reflect real usage patterns. This project introduces an **Intelligent LRU Cache** that combines:
 
@@ -17,23 +17,23 @@ The system allows real-time comparison between normal LRU and intelligent cache 
 
 ---
 
-## ✨ Features
+## Features
 
-### 🟦 Normal LRU Cache
+### Normal LRU Cache
 
 * Classic least-recently-used eviction
 * Doubly linked list implementation
 * Hit/miss tracking
 * Eviction logging
 
-### 🧠 Intelligent ML-Based Cache
+### Intelligent ML-Based Cache
 
 * Hybrid LFU + LRU behaviour
 * Machine learning reuse prediction
 * Metadata-driven eviction scoring
 * Dynamic eviction candidate selection
 
-### 📊 Interactive Dashboard
+### Interactive Dashboard
 
 * Built using Streamlit
 * Real-time cache monitoring
@@ -43,7 +43,7 @@ The system allows real-time comparison between normal LRU and intelligent cache 
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 Frontend (Streamlit Dashboard)
 ⬇
@@ -59,7 +59,7 @@ External APIs (Data Source)
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Backend
 
@@ -84,7 +84,7 @@ External APIs (Data Source)
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 backend/
@@ -105,16 +105,16 @@ main.py
 
 ---
 
-## ⚙️ Installation
+## Installation
 
-### 1️⃣ Clone Repository
+### Clone Repository
 
 ```
 git clone <repo-url>
 cd Intelligent-API-Cache-Eviction
 ```
 
-### 2️⃣ Create Virtual Environment
+### Create Virtual Environment
 
 ```
 python -m venv .venv
@@ -134,7 +134,7 @@ Mac/Linux:
 source .venv/bin/activate
 ```
 
-### 3️⃣ Install Dependencies
+### Install Dependencies
 
 ```
 pip install fastapi uvicorn streamlit requests scikit-learn joblib pandas
@@ -142,7 +142,7 @@ pip install fastapi uvicorn streamlit requests scikit-learn joblib pandas
 
 ---
 
-## ▶️ Running the Project
+## Running the Project
 
 ### Start Backend
 
@@ -168,7 +168,7 @@ streamlit run frontend/app.py
 
 ---
 
-## 🔬 API Endpoints
+## API Endpoints
 
 ### Normal Cache Request
 
@@ -197,7 +197,7 @@ GET /intelligent-evictions
 
 ---
 
-## 🧠 Intelligent Eviction Strategy
+## Intelligent Eviction Strategy
 
 Eviction decisions are based on:
 
@@ -221,7 +221,7 @@ Lower score → higher eviction probability.
 
 ---
 
-## 📊 Example Workflow
+## Example Workflow
 
 1. Send API requests via dashboard
 2. Requests pass through FastAPI
@@ -232,7 +232,7 @@ Lower score → higher eviction probability.
 
 ---
 
-## 🚀 Future Improvements
+## Future Improvements
 
 * Real-time charts
 * Auto-refresh metrics
@@ -243,12 +243,12 @@ Lower score → higher eviction probability.
 
 ---
 
-## 👩‍💻 Author
+## Author
 
 Samriddhi Shaw
 
 ---
 
-## 📜 License
+## License
 
 MIT License
