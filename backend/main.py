@@ -93,3 +93,6 @@ def comparison():
         "normal_evictions": normal_cache.evictions,
         "intelligent_evictions": intelligent_cache.evictions
     }
+@app.get("/")
+def home():
+    return{"message":"API is running"}
